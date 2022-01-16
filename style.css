@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #eeeeee;
+}
+.header_kryesor{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   
+   
+    justify-content: space-between;
+}
+#header_1{
+  background: #0F5298;
+  position: fixed;
+  top: 0;
+  width: 100%;
+   
+}
+#header_2{
+    background: #d32f2f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ #header_3{
+    background: #53a318;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } 
+ #header_4{
+    background: #546e7a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ #header_5{
+    background: #5ba4cf;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ #header_6{
+    background: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #header_7{
+    
+    background: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #header_8{
+    background: #3c1361;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.faqet{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1000px;
+   
+  
+}
+
+.faqet_vecante{
+    /*ktu shkruj edhe per fonte*/
+   
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    
+   
+
+}
+.divi_logos{
+ 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}
+.logoja{
+    width: 60px;
+    height: 60px;
+}
+.logini{
+    width: 50px;
+    height: 50px;
+
+}
+
+a.faqet_vecante:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: underline;
+}
+
+
+.lajmet_shiriti1{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+
+}
+.lajmet_shiriti2{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+
+}
+
+
+
+
+.l{
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right:5px;
+    width: 400px;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+.fotot_home{
+    width: 370px;
+    height: 200px;
+}
+
+
+.teksti_home{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divi_brenda{
+   
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-right: 30px;
+
+}
+.titulli_brenda{
+ 
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+.fotot_brenda_lajmit{
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    
+  
+}
+.f_l{
+    width: 60%;
+    height: 40%;
+    min-width: 300px;
+    min-height :170px;
+}
+.teksti_lajmit{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.footer{
+    width:100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    padding-bottom: 20px;
+
+    
+}
+.teksti_footerit{
+    color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+   
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+    width:500px ;
+    
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+   
+    
+}
+
+.logot_e_footerit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   width: 500px;
+ 
+  
+   
+    
+}
+.fotot_footer{
+    width: 70px;
+    height: 70px;
+}
+.siperfaqja_login{
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-right: 20px;
+    margin-bottom: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: 70%;
+    height: 50%;
+    justify-content: center;
+}
+.forma{
+   
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+   
+  
+}
+
+.borderat_input{
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height:30px
+    
+    
+    
+}
+.labels{
+    color: red;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#submiti{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background: #3c1361;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+    
+    margin-bottom: 50px;
+}
+
+#fname{
+    font-size: 15px; 
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#lname{
+    font-size: 15px; 
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#age{
+    font-size: 15px; 
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#email{
+    font-size: 15px; 
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#password{
+    font-size: 15px; 
+    padding-left: 10px;
+    
+}
+#confirmpass{
+    font-size: 15px; 
+    padding-left: 10px;
+    
+}
+
+#submiti:hover{
+    background-color: purple;
+    color:white ;
+}
+
+.borderat_input:focus{
+    outline: none;
+    
+}
+
+.account{
+    padding-top: 200px;
+    padding-left: 70px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
