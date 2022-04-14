@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Login</title>
+    <title>SignUp</title>
 </head>
 <body>
 
-    <header id="header_9">
+    <header id="header_8">
         <div class="header_kryesor">
               <div class="divi_logos"> 
                 <a href="Home.html"> <img src="images/logo.png" class="logoja" alt="logoja e 24/7 news"></a>
@@ -26,28 +26,34 @@
         </div>
     </header>
     <div class="account">
-    <h2>User Login</h2>
+    <h2>Create Account</h2>
     </div>
     <div class="siperfaqja_login">
         <div class="forma">
 
-                <form action="">
-                  Email : <input id="email"type="email"  class="borderat_input" ><br>
+                <form action="connect.php" method="post">
+                  First Name : <input id="fname"type="text" class="borderat_input" name="emri"><br>
+                  <label for="fname" class="labels" id="fnamemsg"></label><br>
+                  Last Name : <input id="lname"type="text" class="borderat_input" name="mbiemri"><br>
+                  <label for="lname"  class="labels" id="lnamemsg"></label><br>
+                  Age :  <input id="age" type="number" min="18"  class="borderat_input" name="mosha"><br>
+                 <label for="age" id="agemsg" class="labels"></label><br>
+                  Email : <input id="email"type="email"  class="borderat_input" name="emaili"><br>
                  <label for="email" id="emailMsg"class="labels"></label><br>
-                 Password : <input id="password" type="password" class="borderat_input"><br>
+                 Password : <input id="password" type="password" class="borderat_input" name="passi"><br>
                  <label for="password" id="pwmsg" class="labels"></label><br>
-                        <br><br>
-                    <input type="submit" id="submiti"><br>
+                 Confirm Password :  <input id="confirmpass" type="password" class="borderat_input" name="confpass"><br>
+                 <label for="confirmpass" id="cpmsg" class="labels"></label><br><br><br>
+                    <input type="submit" id="submiti"></label><br>
                 </form>
         </div>
     </div>
-    
     <div class="teksti_per_login">
 
-        <p class="fonti_login">If you don't have an account <a href="SignUp.html">Sign Up</a></p>
-  
-      </div>
-  <script src="ValidimiLogin.js"></script>
+      <p class="fonti_login">If you have an account <a href="Login.html">Log in</a></p>
+
+    </div>
+  <script src="index.js"></script>
     <footer>
         <div class="footer">
              <div class="teksti_footerit">

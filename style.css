@@ -64,6 +64,12 @@ body{
     top: 0;
     width: 100%;
   }
+  #header_9{
+    background: #3c1361;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 .faqet{
     margin-top: 30px;
     display: flex;
@@ -267,7 +273,7 @@ a:active{
     margin-top: 50px;
     margin-left: 90px;
     margin-right: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     
     display: flex;
     flex-direction: column;
@@ -344,6 +350,7 @@ a:active{
     padding-left: 10px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 #password{
     font-size: 15px; 
     padding-left: 10px;
@@ -370,4 +377,16 @@ a:active{
     padding-left: 70px;
     font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.teksti_per_login{
+    
+  
+    margin-bottom: 200px;
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.fonti_login{
+    font-size: 20px;
 }
