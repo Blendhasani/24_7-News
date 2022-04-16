@@ -30,6 +30,18 @@ function insertUser($user){
     echo "<script>alert('User has been inserted successfully!');</script>";
 }
 
+
+
+
+function getAllUsers(){
+    $conn = $this->connection;
+    $sql = "SELECT * FROM userat";
+
+    $statement = $conn->query($sql);
+    $users = $statement->fetchAll();
+    return $users;
+}
+
 }
 
 // $userRepo = new UserRepository;
