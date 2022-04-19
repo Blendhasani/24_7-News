@@ -21,14 +21,16 @@ function insertUser($user){
     $mosha=$user->getMosha();
     $emaili=$user->getEmaili();
     $passi=$user->getPassi();
-    $confpassi=$user->getConfpass();
+    $confpass=$user->getConfpass();
 
     $sql = "INSERT INTO userat(emri,mbiemri,mosha,emaili,passi,confpass) VALUES (?,?,?,?,?,?)";
     $statement = $conn->prepare($sql);
-    $statement->execute([$emri,$mbiemri,$mosha,$emaili,$passi,$confpassi]);
+    $statement->execute([$emri,$mbiemri,$mosha,$emaili,$passi,$confpass]);
 
     echo "<script>alert('User has been inserted successfully!');</script>";
 }
+
+
 
 
 
@@ -42,9 +44,43 @@ function getAllUsers(){
     return $users;
 }
 
+
+function getUserByEmail($emaili){
+    $conn = $this->connection;
+    $sql = "SELECT * FROM userat WHERE emaili ='$emaili'";
+
+    $statement = $conn->query($sql);
+    $user = $statement->fetch();
+    return $user;
 }
 
-// $userRepo = new UserRepository;
 
-// $userRepo->insertUser();
+function updateUser($emri,$mbiemri,$mosha,$emaili,$passi,$confpass){
+    $conn = $this->connection;
+    $sql = "UPDATE userat SET emri=? , mbiemri=?,mosha=?,passi=?,confpass=? WHERE emaili=?";
+
+
+    $statement = $conn->prepare($sql);
+    $statement->execute([$emri,$mbiemri,$mosha,$emaili,$passi,$confpass]);
+    
+    echo "<script>alert('Update was successful'); </script>";
+   
+
+}
+
+function deleteUser($emaili){
+    $conn = $this->connection;
+
+    $sql = "DELETE FROM userat WHERE emaili=?";
+
+    $statement = $conn->prepare($sql);
+
+    $statement->execute([$emaili]);
+
+    echo "<script>alert('delete was successful'); </script>";
+} 
+
+}
+
+
 ?>

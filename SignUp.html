@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +23,7 @@
                 <a href="Tech.html"  class="faqet_vecante">Tech</a>
                 <a href="Health.html"  class="faqet_vecante">Health</a>
                 <a href="Science.html"  class="faqet_vecante">Science</a>
+                <a href="AboutUs.php" class="faqet_vecante">About Us</a>
                 <a href="SignUp.html"  class="faqet_vecante"><img src="images/login.png" class="logini" alt="login forma"></a>
             </div>
         </div>
@@ -28,10 +31,11 @@
     <div class="account">
     <h2>Create Account</h2>
     </div>
+   
     <div class="siperfaqja_login">
         <div class="forma">
 
-                <form action="connect.php" method="post">
+                <form action="SignUpC.php" method="post">
                   First Name : <input id="fname"type="text" class="borderat_input" name="emri"><br>
                   <label for="fname" class="labels" id="fnamemsg"></label><br>
                   Last Name : <input id="lname"type="text" class="borderat_input" name="mbiemri"><br>
@@ -44,13 +48,15 @@
                  <label for="password" id="pwmsg" class="labels"></label><br>
                  Confirm Password :  <input id="confirmpass" type="password" class="borderat_input" name="confpass"><br>
                  <label for="confirmpass" id="cpmsg" class="labels"></label><br><br><br>
-                    <input type="submit" id="submiti"></label><br>
+                    <input type="submit" value="Sign Up" name="submiti" id="submiti"></label><br>
                 </form>
+                
         </div>
     </div>
+
     <div class="teksti_per_login">
 
-      <p class="fonti_login">If you have an account <a href="Login.html">Log in</a></p>
+      <p class="fonti_login">Have an account ? <a href="Login.php">Log in</a></p>
 
     </div>
   <script src="index.js"></script>

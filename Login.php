@@ -1,3 +1,76 @@
+<?php
+
+session_start(); 
+
+$conn = new mysqli('localhost', 'root', '', 'signup');
+if(!$conn){
+    die(mysqli_error($conn));
+}
+
+if (isset($_POST['emaili']) && isset($_POST['passi'])) {
+
+    function validate($data){
+
+       $data = trim($data);
+
+       $data = stripslashes($data);
+
+       $data = htmlspecialchars($data);
+
+       return $data;
+
+    }
+
+    $emaili = validate($_POST['emaili']);
+
+    $passi = validate($_POST['passi']);
+    $type=$_POST['type'];
+
+    $sql = "SELECT * FROM admins WHERE emaili='$emaili' AND passi='$passi'";
+    $result = mysqli_query($conn, $sql);
+   
+    if (mysqli_num_rows($result) === 1) {
+
+        $row = mysqli_fetch_assoc($result);
+       
+        if ($row['emaili'] === $emaili && $row['passi'] === $passi && $row['type']=='Admin') {
+
+            $_SESSION['emaili'] = $row['emaili'];
+
+            $_SESSION['passi'] = $row['passi'];
+
+            $_SESSION['id'] = $row['id'];
+            
+            header("Location: ./view");
+          
+            
+            exit();
+
+        }
+  
+        if ($row['emaili'] === $emaili && $row['passi'] === $passi && $row['type']==='User') {
+
+            $_SESSION['emaili'] = $row['emaili'];
+
+            $_SESSION['passi'] = $row['passi'];
+
+            $_SESSION['id'] = $row['id'];
+            
+            header("Location: ./aboutUs.php");
+            exit();
+
+        }
+    }
+
+    else{
+        header("Location: Login.php?msg1=Email or password is incorrect");
+        exit();
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +81,8 @@
     <title>Login</title>
 </head>
 <body>
+
+
 
     <header id="header_9">
         <div class="header_kryesor">
@@ -21,6 +96,7 @@
                 <a href="Tech.html"  class="faqet_vecante">Tech</a>
                 <a href="Health.html"  class="faqet_vecante">Health</a>
                 <a href="Science.html"  class="faqet_vecante">Science</a>
+                <a href="AboutUs.php" class="faqet_vecante">About Us</a>
                 <a href="SignUp.html"  class="faqet_vecante"><img src="images/login.png" class="logini" alt="login forma"></a>
             </div>
         </div>
@@ -31,20 +107,32 @@
     <div class="siperfaqja_login">
         <div class="forma">
 
-                <form action="">
-                  Email : <input id="email"type="email"  class="borderat_input" name="emailii"><br>
+                <form method="POST">
+                  <table class="tipi">
+                    <tr>
+                      <td><select name="type" id="tipi" >
+                        <option value="-1" class="tipi_in">Select user type:</option>
+                        <option value="Admin" class="tipi_in">Admin</option>
+                        <option value="User" class="tipi_in">User</option>
+                      </select></td>
+                    </tr>
+                  </table>
+                  Email : <input id="email" type="email"  class="borderat_input" name="emaili"><br>
                  <label for="email" id="emailMsg"class="labels"></label><br>
-                 Password : <input id="password" type="password" class="borderat_input" name="passii"><br>
+                 Password : <input id="password" type="password" class="borderat_input" name="passi"><br>
                  <label for="password" id="pwmsg" class="labels"></label><br>
+                 <?php if (isset($_GET['msg1'])) { ?>
+                            <p style="color: rgb(255, 0, 0, 0.8);"><?php echo $_GET['msg1']; ?></p>
+                        <?php } ?>
                         <br><br>
-                    <input type="submit" id="submiti"><br>
+                    <input type="submit" name="submit" value="Login" id="submiti"><br>
                 </form>
         </div>
     </div>
     
     <div class="teksti_per_login">
 
-        <p class="fonti_login">If you don't have an account <a href="SignUp.html">Sign Up</a></p>
+        <p class="fonti_login">You don't have an account ? <a href="SignUp.html">Sign Up</a></p>
   
       </div>
   <script src="ValidimiLogin.js"></script>

@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
- <header id="header_1">
+ <header id="header_10">
     <div class="header_kryesor">
           <div class="divi_logos"> 
             <a href="Home.html"> <img src="images/logo.png" class="logoja" alt="logoja e 24/7 news"></a>
@@ -24,72 +25,43 @@
             <a href="SignUp.html"  class="faqet_vecante"><img src="images/login.png" class="logini" alt="login forma"></a>
         </div>
     </div>
+
 </header>
 
 
-    <div class="lajmet_shiriti1">
 
-        <div class="l">
-            <div>
-              <a href="lajmet/Lajmi1_1.html"><img class="fotot_home"src="images/russia.jpg" alt="russia"></a>
-            </div>
-            <div class="teksti_home">
-             <h4>Russia Ukraine: Massive consequences <br>if Moscow invades, G7 says</h4>
-            </div>
-        </div>
 
-        <div class="l">
-            <div>
-              <a href="lajmet/Lajmi1_2.html"><img class="fotot_home"src="images/meta.jpg" alt="meta"></a>
-            </div>
-            <div class="teksti_home">
-             <h4>Meta releases social VR space Horizon Worlds</h4>
-            </div>
-        </div>
+<div class="slideshow-container">
 
-        <div class="l">
-          <div>
-            <a href="lajmet/Lajmi1_3.html"><img class="fotot_home"src="images/spy.jpg" alt="spy"></a>
-          </div>
-          <div class="teksti_home">
-           <h4>How to spot the software that could be spying on you</h4>
-          </div>
-      </div>
- 
-    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img1.jpg" style="width:100%">
+      <div class="text">World</div>
     </div>
-    <div class="lajmet_shiriti2">
-
-      <div class="l">
-          <div>
-            <a href="lajmet/Lajmi1_4.html"><img class="fotot_home"src="images/crypto.jpg" alt="crypto"></a>
-          </div>
-          <div class="teksti_home">
-           <h4>Football fans spending millions on club crypto-tokens</h4>
-          </div>
-      </div>
-
-      <div class="l">
-          <div>
-            <a href="lajmet/Lajmi1_5.html"><img class="fotot_home"src="images/hologram2.jpg" alt="hologram2"></a>
-          </div>
-          <div class="teksti_home">
-           <h4>How hologram tech may soon replace video calls</h4>
-          </div>
-      </div>
-
-      <div class="l">
-        <div>
-          <a href="lajmet/Lajmi1_6.html"><img class="fotot_home"src="images/Omicron.png" alt="omicron"></a>
-        </div>
-        <div class="teksti_home">
-         <h4>Covid: Omicron study suggests major wave in January</h4>
-        </div>
-    </div>
-
   
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img2.jpg" style="width:100%">
+      <div class="text">Tech</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img3.jpg" style="width:100%">
+      <div class="text">Coronavirus</div>
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+ <br><br><br>
   <footer>
    <div class="footer">
         <div class="teksti_footerit">
@@ -110,7 +82,10 @@
         </div>
    </div>
   </footer>
- 
+  <script src="sliderJS.js"></script>
+
+
+
 
 </body>
 </html>
