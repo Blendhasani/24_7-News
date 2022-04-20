@@ -41,14 +41,14 @@ if (isset($_POST['emaili']) && isset($_POST['passi'])) {
 
             $_SESSION['id'] = $row['id'];
             
-            header("Location: ./view");
+            header("Location: ./view/dashboard.php");
           
             
             exit();
 
         }
   
-        if ($row['emaili'] === $emaili && $row['passi'] === $passi && $row['type']==='User') {
+        if ($row['emaili'] === $emaili && $row['passi'] === $passi && $row['type']=='User') {
 
             $_SESSION['emaili'] = $row['emaili'];
 
@@ -60,6 +60,18 @@ if (isset($_POST['emaili']) && isset($_POST['passi'])) {
             exit();
 
         }
+        if ($row['emaili'] === $emaili && $row['passi'] === $passi && $row['type']=='Editor') {
+
+          $_SESSION['emaili'] = $row['emaili'];
+
+          $_SESSION['passi'] = $row['passi'];
+
+          $_SESSION['id'] = $row['id'];
+          
+          header("Location: ./viewNews/newsDashboard.php");
+          exit();
+
+      }
     }
 
     else{
@@ -114,6 +126,7 @@ if (isset($_POST['emaili']) && isset($_POST['passi'])) {
                         <option value="-1" class="tipi_in">Select user type:</option>
                         <option value="Admin" class="tipi_in">Admin</option>
                         <option value="User" class="tipi_in">User</option>
+                        <option value="Editor" class="tipi_in">Editor</option>
                       </select></td>
                     </tr>
                   </table>

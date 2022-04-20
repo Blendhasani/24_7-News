@@ -806,3 +806,34 @@ a{
     
 }
 
+#divi_butonave{
+
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+  
+}
+
+.butonat{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 0px;
+    margin-right: 20px;
+    padding-right: 20px;
+    
+}
+.linku_logout{
+    list-style-type: none;
+    margin-right: 10px;
+
+    
+}
+
+
+#registri{
+
+margin-left: 20px;
+}

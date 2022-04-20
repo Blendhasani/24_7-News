@@ -2,7 +2,19 @@
 
 session_start();
 if(isset($_SESSION['emaili'])){
-    echo "<p class=\"welcomeadmin\"> Welcome : ".$_SESSION['emaili']." !</p>";
+    // echo "<p class=\"welcomeadmin\"> Welcome : ".$_SESSION['emaili']." !</p>";
+    echo "
+    <div id=divi_butonave>
+    <p  class=\"welcomeadmin\"> Welcome : ".$_SESSION['emaili']." !</p>
+  
+    <ul class=butonat>
+   
+    <li><a class=linku_logout href='../Login.php'> <input class=logout type=button value=\"Log Out\" name=logout></a></li>
+    <li><a class=linku_logout href='register.php' > <input id = registri class=logout type=button value=\"Register\" name=logout></a></li>
+    </li>
+    
+    </div>
+    ";
 }
 
 ?>
@@ -66,10 +78,7 @@ include "../style.css";
             ";
         }
     
-     if(isset($_SESSION)){
-         echo "<a class=linku_logout href='../Login.php'> <input class=logout type=button value=\"Log Out\" name=logout></a>";
-         
-        }
+
         ?>
 
 </table>
